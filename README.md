@@ -7,7 +7,7 @@
 
 [Dario Vasconcelos (dgsv)](https:/github.com/dariogsv)
 
-Luis [Felipe Miranda (lfms)](https:/github.com/luisfelip80)
+[Luis Felipe Miranda (lfms)](https:/github.com/luisfelip80)
 
 [Marco Maia (magm2)](https:/github.com/marcogmaia)
 
