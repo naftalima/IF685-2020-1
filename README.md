@@ -12,4 +12,5 @@
 [Marco Maia (magm2)](https:/github.com/marcogmaia)
 
 [Nathalia Lima (npl)](https:/github.com/naftalima)
+
 [Gabriel Maciel (gmc2)](https://github.com/Confucioo)
