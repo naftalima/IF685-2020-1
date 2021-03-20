@@ -28,7 +28,7 @@
     <nodes xmi:type="eer:Attribute" xmi:id="_FfEjAHrrEeuH2MP-NakLLg" name="QTD.  de indicações" type="DERIVED" AttributeLinkTarget="_N0_sIHrrEeuH2MP-NakLLg"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_W5G00HxHEeuZOJb4WYPV8Q" name="ID" type="IDENTIFIER" AttributeLinkTarget="_Y1dz0HxHEeuZOJb4WYPV8Q"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_g49JIHxHEeuZOJb4WYPV8Q" name="Data de entrada" AttributeLinkTarget="_0UZOIHxHEeuZOJb4WYPV8Q"/>
-    <nodes xmi:type="eer:Attribute" xmi:id="_mUDf4HxHEeuZOJb4WYPV8Q" name="QDT. de vendas" type="DERIVED" AttributeLinkTarget="_01B2AHxHEeuZOJb4WYPV8Q"/>
+    <nodes xmi:type="eer:Attribute" xmi:id="_mUDf4HxHEeuZOJb4WYPV8Q" name="QTD. de vendas" type="DERIVED" AttributeLinkTarget="_01B2AHxHEeuZOJb4WYPV8Q"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_2O5zAHxHEeuZOJb4WYPV8Q" name="QTD.  de compras" type="DERIVED" AttributeLinkTarget="_NpLsIHxIEeuZOJb4WYPV8Q"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_3qUoIHxHEeuZOJb4WYPV8Q" name="Nível" AttributeLinkTarget="_NOTuAHxIEeuZOJb4WYPV8Q"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_UuszcIdjEeuaNJN4p0ebZA" name="Interesses" AttributeLinkTarget="_Wob8QIdjEeuaNJN4p0ebZA"/>
@@ -41,8 +41,8 @@
     <nodes xmi:type="eer:Attribute" xmi:id="_h_dbgImrEeulC8FniPXzAQ" name="Valor das parcelas" AttributeLinkTarget="_h_f3wImrEeulC8FniPXzAQ"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_E9uVMImsEeulC8FniPXzAQ" name="Juros" AttributeLinkTarget="_E9wKYImsEeulC8FniPXzAQ"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_2gXaIImzEeulC8FniPXzAQ" name="Email" type="MULTIVALUED" AttributeLinkTarget="_2gZ2YImzEeulC8FniPXzAQ"/>
-    <nodes xmi:type="eer:Relationship" xmi:id="_KJCwQIm8EeulC8FniPXzAQ" name="tem" relationshipLink="_OuwXIIm8EeulC8FniPXzAQ _T6ifgIm8EeulC8FniPXzAQ"/>
-    <nodes xmi:type="eer:Entity" xmi:id="_RmagwIm8EeulC8FniPXzAQ" name="Lista de desejos" AttributeLinkSource="_TDfGQIm9EeulC8FniPXzAQ _jrGYwIm9EeulC8FniPXzAQ _8_8hIIm9EeulC8FniPXzAQ" relationshipLink="_T6ifgIm8EeulC8FniPXzAQ _ZXTDIIm8EeulC8FniPXzAQ"/>
+    <nodes xmi:type="eer:Relationship" xmi:id="_KJCwQIm8EeulC8FniPXzAQ" name="tem" isIdentifier="true" relationshipLink="_OuwXIIm8EeulC8FniPXzAQ _T6ifgIm8EeulC8FniPXzAQ"/>
+    <nodes xmi:type="eer:Entity" xmi:id="_RmagwIm8EeulC8FniPXzAQ" name="Lista de desejos" AttributeLinkSource="_TDfGQIm9EeulC8FniPXzAQ _jrGYwIm9EeulC8FniPXzAQ _8_8hIIm9EeulC8FniPXzAQ" relationshipLink="_T6ifgIm8EeulC8FniPXzAQ _ZXTDIIm8EeulC8FniPXzAQ" isWeak="true"/>
     <nodes xmi:type="eer:Relationship" xmi:id="_Vn-RsIm8EeulC8FniPXzAQ" name="Contém" relationshipLink="_YkklsIm8EeulC8FniPXzAQ _ZXTDIIm8EeulC8FniPXzAQ"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_TDXKcIm9EeulC8FniPXzAQ" name="Qtd. de itens" type="DERIVED" AttributeLinkTarget="_TDfGQIm9EeulC8FniPXzAQ"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_jrEjkIm9EeulC8FniPXzAQ" name="Nome" AttributeLinkTarget="_jrGYwIm9EeulC8FniPXzAQ"/>
@@ -90,7 +90,7 @@
     <links xmi:type="eer:AttributeLink" xmi:id="_E9wKYImsEeulC8FniPXzAQ" source="_wvszcHJDEeuD7N10X8fz9w" target="_E9uVMImsEeulC8FniPXzAQ"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_2gZ2YImzEeulC8FniPXzAQ" source="__-0JUHJAEeuD7N10X8fz9w" target="_2gXaIImzEeulC8FniPXzAQ"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_OuwXIIm8EeulC8FniPXzAQ" source="__-0JUHJAEeuD7N10X8fz9w" target="_KJCwQIm8EeulC8FniPXzAQ"/>
-    <links xmi:type="eer:RelationshipLink" xmi:id="_T6ifgIm8EeulC8FniPXzAQ" source="_RmagwIm8EeulC8FniPXzAQ" target="_KJCwQIm8EeulC8FniPXzAQ" participation="TOTAL" cardinality="MANY"/>
+    <links xmi:type="eer:RelationshipLink" xmi:id="_T6ifgIm8EeulC8FniPXzAQ" source="_RmagwIm8EeulC8FniPXzAQ" target="_KJCwQIm8EeulC8FniPXzAQ" participation="TOTAL" cardinality="MANY" isIdentifier="true"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_YkklsIm8EeulC8FniPXzAQ" source="_rWCxsHJEEeuD7N10X8fz9w" target="_Vn-RsIm8EeulC8FniPXzAQ" cardinality="MANY"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_ZXTDIIm8EeulC8FniPXzAQ" source="_RmagwIm8EeulC8FniPXzAQ" target="_Vn-RsIm8EeulC8FniPXzAQ" cardinality="MANY"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_TDfGQIm9EeulC8FniPXzAQ" source="_RmagwIm8EeulC8FniPXzAQ" target="_TDXKcIm9EeulC8FniPXzAQ"/>
@@ -379,14 +379,14 @@
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_KJFzkYm8EeulC8FniPXzAQ"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_KJFzkom8EeulC8FniPXzAQ" fontName="Segoe UI"/>
       <styles xmi:type="notation:FillStyle" xmi:id="_KJFzk4m8EeulC8FniPXzAQ"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KJFzlIm8EeulC8FniPXzAQ" x="975" y="245"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KJFzlIm8EeulC8FniPXzAQ" x="975" y="330"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_RmbH0Im8EeulC8FniPXzAQ" type="2001" element="_RmagwIm8EeulC8FniPXzAQ">
       <children xmi:type="notation:DecorationNode" xmi:id="_RmbH1Ym8EeulC8FniPXzAQ" type="5001"/>
       <styles xmi:type="notation:DescriptionStyle" xmi:id="_RmbH0Ym8EeulC8FniPXzAQ"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_RmbH0om8EeulC8FniPXzAQ" fontName="Segoe UI"/>
       <styles xmi:type="notation:FillStyle" xmi:id="_RmbH04m8EeulC8FniPXzAQ"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RmbH1Im8EeulC8FniPXzAQ" x="960" y="85" width="154" height="86"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RmbH1Im8EeulC8FniPXzAQ" x="960" y="100" width="154" height="86"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_Vn-4wIm8EeulC8FniPXzAQ" type="2003" element="_Vn-RsIm8EeulC8FniPXzAQ">
       <children xmi:type="notation:DecorationNode" xmi:id="_Vn-4xYm8EeulC8FniPXzAQ" type="5004"/>
