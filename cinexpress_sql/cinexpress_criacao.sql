@@ -156,3 +156,5 @@ CREATE TABLE "LISTA_DE_DESEJOS"
    ) ;
 
 -----------------------END-CRIACAO-----------------------
+
+-- executar cinexpress_triggers.sql
