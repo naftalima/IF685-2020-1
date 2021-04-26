@@ -3,7 +3,7 @@
   <eer:Schema xmi:id="_c6PyQHCeEeuDaKDj9lm68Q">
     <nodes xmi:type="eer:Entity" xmi:id="__-0JUHJAEeuD7N10X8fz9w" name="Usuário" AttributeLinkSource="_66GDgHJGEeuD7N10X8fz9w _7JGv4HJGEeuD7N10X8fz9w _7aNuAHJGEeuD7N10X8fz9w _7rENcHJGEeuD7N10X8fz9w _btwb8HJJEeuD7N10X8fz9w _N0_sIHrrEeuH2MP-NakLLg _2gZ2YImzEeulC8FniPXzAQ" relationshipLink="_YmiF8HJBEeuD7N10X8fz9w _Zv6v4HJBEeuD7N10X8fz9w" inheritanceGL="_g2zdkHJCEeuD7N10X8fz9w"/>
     <nodes xmi:type="eer:Relationship" xmi:id="_LHRrgHJBEeuD7N10X8fz9w" name="Indica" relationshipLink="_YmiF8HJBEeuD7N10X8fz9w _Zv6v4HJBEeuD7N10X8fz9w"/>
-    <nodes xmi:type="eer:Entity" xmi:id="_iPlD0HJBEeuD7N10X8fz9w" name="Comprador" AttributeLinkSource="_NOTuAHxIEeuZOJb4WYPV8Q _NpLsIHxIEeuZOJb4WYPV8Q _Wob8QIdjEeuaNJN4p0ebZA" relationshipLink="_G8OQ8ImmEeulC8FniPXzAQ _g3NhYImoEeulC8FniPXzAQ _kdmNwKFYEeubze1GzIMIdw _OuwXIIm8EeulC8FniPXzAQ" inheritanceSL="_eRMGMHJCEeuD7N10X8fz9w"/>
+    <nodes xmi:type="eer:Entity" xmi:id="_iPlD0HJBEeuD7N10X8fz9w" name="Comprador" AttributeLinkSource="_NpLsIHxIEeuZOJb4WYPV8Q _Wob8QIdjEeuaNJN4p0ebZA" relationshipLink="_G8OQ8ImmEeulC8FniPXzAQ _g3NhYImoEeulC8FniPXzAQ _kdmNwKFYEeubze1GzIMIdw _OuwXIIm8EeulC8FniPXzAQ" inheritanceSL="_eRMGMHJCEeuD7N10X8fz9w"/>
     <nodes xmi:type="eer:Inheritance" xmi:id="_dt06cHJCEeuD7N10X8fz9w" inheritanceGL="_g2zdkHJCEeuD7N10X8fz9w" inheritanceSL="_eRMGMHJCEeuD7N10X8fz9w _o5TUYHJCEeuD7N10X8fz9w"/>
     <nodes xmi:type="eer:Entity" xmi:id="_mMNcAHJCEeuD7N10X8fz9w" name="Vendedor" AttributeLinkSource="_0UZOIHxHEeuZOJb4WYPV8Q _01B2AHxHEeuZOJb4WYPV8Q _ihzjkKFlEeubze1GzIMIdw" relationshipLink="_WS0aEHJFEeuD7N10X8fz9w" inheritanceSL="_o5TUYHJCEeuD7N10X8fz9w"/>
     <nodes xmi:type="eer:Relationship" xmi:id="_4idakHJCEeuD7N10X8fz9w" name="Compra" AttributeLinkSource="_0KUe4ImqEeulC8FniPXzAQ _9vcU4I8iEeusfMkPoMTTIQ _hn7Q0ImhEeuO4oGT-T6veQ _h_f3wImrEeulC8FniPXzAQ _47EREImqEeulC8FniPXzAQ _E9wKYImsEeulC8FniPXzAQ" relationshipLink="_vcNfIKFSEeubze1GzIMIdw _kdmNwKFYEeubze1GzIMIdw _fFsYIKFcEeubze1GzIMIdw"/>
@@ -29,7 +29,6 @@
     <nodes xmi:type="eer:Attribute" xmi:id="_g49JIHxHEeuZOJb4WYPV8Q" name="Data de entrada" AttributeLinkTarget="_0UZOIHxHEeuZOJb4WYPV8Q"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_mUDf4HxHEeuZOJb4WYPV8Q" name="QTD. de vendas" type="DERIVED" AttributeLinkTarget="_01B2AHxHEeuZOJb4WYPV8Q"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_2O5zAHxHEeuZOJb4WYPV8Q" name="QTD.  de compras" type="DERIVED" AttributeLinkTarget="_NpLsIHxIEeuZOJb4WYPV8Q"/>
-    <nodes xmi:type="eer:Attribute" xmi:id="_3qUoIHxHEeuZOJb4WYPV8Q" name="Nível" AttributeLinkTarget="_NOTuAHxIEeuZOJb4WYPV8Q"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_UuszcIdjEeuaNJN4p0ebZA" name="Interesses" AttributeLinkTarget="_Wob8QIdjEeuaNJN4p0ebZA"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_0KSpsImqEeulC8FniPXzAQ" name="Horário" type="DISCRIMINATOR" AttributeLinkTarget="_0KUe4ImqEeulC8FniPXzAQ"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_47Cb4ImqEeulC8FniPXzAQ" name="Preço" AttributeLinkTarget="_47EREImqEeulC8FniPXzAQ"/>
@@ -78,7 +77,6 @@
     <links xmi:type="eer:AttributeLink" xmi:id="_Y1dz0HxHEeuZOJb4WYPV8Q" source="_rWCxsHJEEeuD7N10X8fz9w" target="_W5G00HxHEeuZOJb4WYPV8Q"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_0UZOIHxHEeuZOJb4WYPV8Q" source="_mMNcAHJCEeuD7N10X8fz9w" target="_g49JIHxHEeuZOJb4WYPV8Q"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_01B2AHxHEeuZOJb4WYPV8Q" source="_mMNcAHJCEeuD7N10X8fz9w" target="_mUDf4HxHEeuZOJb4WYPV8Q"/>
-    <links xmi:type="eer:AttributeLink" xmi:id="_NOTuAHxIEeuZOJb4WYPV8Q" source="_iPlD0HJBEeuD7N10X8fz9w" target="_3qUoIHxHEeuZOJb4WYPV8Q"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_NpLsIHxIEeuZOJb4WYPV8Q" source="_iPlD0HJBEeuD7N10X8fz9w" target="_2O5zAHxHEeuZOJb4WYPV8Q"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_Wob8QIdjEeuaNJN4p0ebZA" source="_iPlD0HJBEeuD7N10X8fz9w" target="_UuszcIdjEeuaNJN4p0ebZA"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_hn7Q0ImhEeuO4oGT-T6veQ" source="_4idakHJCEeuD7N10X8fz9w" target="_ronS8HJFEeuD7N10X8fz9w"/>
@@ -307,13 +305,6 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_2O6aEnxHEeuZOJb4WYPV8Q" fontName="Segoe UI"/>
       <styles xmi:type="notation:FillStyle" xmi:id="_2O6aE3xHEeuZOJb4WYPV8Q"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_2O6aFHxHEeuZOJb4WYPV8Q" x="1120" y="344" width="133" height="40"/>
-    </children>
-    <children xmi:type="notation:Node" xmi:id="_3qVPMHxHEeuZOJb4WYPV8Q" type="2004" element="_3qUoIHxHEeuZOJb4WYPV8Q">
-      <children xmi:type="notation:DecorationNode" xmi:id="_3qV2QHxHEeuZOJb4WYPV8Q" type="5005"/>
-      <styles xmi:type="notation:DescriptionStyle" xmi:id="_3qVPMXxHEeuZOJb4WYPV8Q"/>
-      <styles xmi:type="notation:FontStyle" xmi:id="_3qVPMnxHEeuZOJb4WYPV8Q" fontName="Segoe UI"/>
-      <styles xmi:type="notation:FillStyle" xmi:id="_3qVPM3xHEeuZOJb4WYPV8Q"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3qVPNHxHEeuZOJb4WYPV8Q" x="1144" y="400" width="100" height="44"/>
     </children>
     <children xmi:type="notation:Node" xmi:id="_UuxE4IdjEeuaNJN4p0ebZA" type="2004" element="_UuszcIdjEeuaNJN4p0ebZA">
       <children xmi:type="notation:DecorationNode" xmi:id="_UuyTAIdjEeuaNJN4p0ebZA" type="5005"/>
@@ -663,11 +654,6 @@
       <styles xmi:type="notation:RoutingStyle" xmi:id="_2PCV4XxHEeuZOJb4WYPV8Q"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_2PCV4nxHEeuZOJb4WYPV8Q" fontName="Segoe UI"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_2PCV43xHEeuZOJb4WYPV8Q" points="[147, 36, -129, -32]$[208, 51, -68, -17]"/>
-    </edges>
-    <edges xmi:type="notation:Edge" xmi:id="_iG4fYHxIEeuZOJb4WYPV8Q" type="4007" element="_NOTuAHxIEeuZOJb4WYPV8Q" source="_iPlq4HJBEeuD7N10X8fz9w" target="_3qVPMHxHEeuZOJb4WYPV8Q">
-      <styles xmi:type="notation:RoutingStyle" xmi:id="_iG4fYXxIEeuZOJb4WYPV8Q"/>
-      <styles xmi:type="notation:FontStyle" xmi:id="_iG4fYnxIEeuZOJb4WYPV8Q" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_iG4fY3xIEeuZOJb4WYPV8Q" points="[-90, -10, 64, 7]$[-119, -13, 35, 4]"/>
     </edges>
     <edges xmi:type="notation:Edge" xmi:id="_iG5tgHxIEeuZOJb4WYPV8Q" type="4007" element="_NpLsIHxIEeuZOJb4WYPV8Q" source="_iPlq4HJBEeuD7N10X8fz9w" target="_2O6aEHxHEeuZOJb4WYPV8Q">
       <styles xmi:type="notation:RoutingStyle" xmi:id="_iG5tgXxIEeuZOJb4WYPV8Q"/>
