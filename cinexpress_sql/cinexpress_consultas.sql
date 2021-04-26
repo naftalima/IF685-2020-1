@@ -49,6 +49,7 @@ HAVING COUNT(p.ID) > 1;
 
 
 -- Retorna as compra cujo preço do produto é o maior de todos
+-- Subconsulta escalar
 SELECT * 
 	FROM CIN.COMPRAS c 
 	WHERE (c.PRECO/c.QTD_PRODUTOS) = (
@@ -66,6 +67,15 @@ SELECT ID , NOME, PRECO, (
 	FROM CIN.PRODUTO prod 
 	WHERE PRECO > 100 
 	GROUP BY ID, NOME, PRECO;
+
+-- Retorna Tabela com CPF, nome do produto, quantidade e preço
+-- Subconsulta do tipo tabela
+SELECT c.CPF_COMPRADOR, (
+	SELECT nome 
+		FROM CIN.PRODUTO p 
+		WHERE c.ID_PRODUTO = p.ID
+	) AS nome, c.QTD_PRODUTOS, c.PRECO 
+	FROM CIN.COMPRAS c;
 
 
 		
