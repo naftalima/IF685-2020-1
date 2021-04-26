@@ -18,13 +18,37 @@ INNER JOIN USUARIOS u ON c.CPF_COMPRADOR = u.CPF
 INNER JOIN PRODUTO p ON c.ID_PRODUTO = p.ID
 ORDER BY u.NOME;
 
+-- TODO:
 -- -Subconsulta do tipo escalar
-
--- selecionar quantidade de compras de cada usuario
-
-
+    -- selecionar a quantidade COMPRAS e seus NOMES dos itens distintos que estao nas listas de desejo, 
+    -- e ordernar pela quantidade 
 
 
+-- SELECT column-names
+-- FROM table-name1
+-- WHERE value IN (SELECT column-name
+--                 FROM table-name2 
+--                 WHERE condition)
+
+-- SELECT column1 = (SELECT column-name FROM table-name WHERE condition),
+--        column-names
+-- FROM table-name
+-- WEHRE condition
+
+
+-- selecionar os vendedores q tem mais de 3 produto
+SELECT u.NOME , COUNT(p.ID)
+FROM (
+	VENDEDOR v
+	INNER JOIN LOJA l ON l.CPF_VENDEDOR = v.CPF_USUARIO
+	INNER JOIN PRODUTO p ON p.ID_LOJA = l.ID 
+	INNER JOIN USUARIOS u ON u.CPF = v.CPF_USUARIO 
+)
+GROUP BY u.NOME 
+HAVING COUNT(p.ID) > 1;
 
 -- consulta que retira todos os dados sensiveis do usuario
 
+-- consulta que retorna todas as compras do usuario
+
+-- TODO:

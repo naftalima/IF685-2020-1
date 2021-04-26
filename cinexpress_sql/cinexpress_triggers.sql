@@ -50,6 +50,7 @@ BEGIN
     FROM DUAL;
 END;
 
+--------------END-SEQUENCES---------------
 
 -- CREATE [OR REPLACE] FUNCTION function_name  
 --    [ (parameter [,parameter]) ]  
@@ -83,19 +84,29 @@ END;
 --     RETURN l_total_sales;
 -- END;
 
-CREATE OR REPLACE FUNCTION gasto_comprador(CPF IN NUMBER)
--- parametros?? vai receber a key (CPF)
-RETURN NUMBER
-IS total NUMBER(12) := 0;
-BEGIN
-    SELECT SUM(PRECO) FROM COMPRAS WHERE CPF_COMPRADOR=CPF;
-    -- soma tudo aqui
-    -- retorna o valor total
 
-CREATE OR REPLACE TRIGGER atauliaza_qtd_produto
-BEFORE INSERT ON COMPRAS
-FOR EACH ROW
-    UPDATE PRODUTO
-    SET QUANTIDADE = QUANTIDADE - 1
-    WHERE ID = NEW.ID_PRODUTO && QUANTIDADE > 0
 
+-- CREATE OR REPLACE FUNCTION gasto_comprador(CPF IN NUMBER)
+-- -- parametros?? vai receber a key (CPF)
+-- RETURN NUMBER
+-- IS total NUMBER(12) := 0;
+-- BEGIN
+--     SELECT SUM(PRECO) FROM COMPRAS WHERE CPF_COMPRADOR=CPF;
+--     -- soma tudo aqui
+--     -- retorna o valor total
+
+-- TODO:
+-- trigger para atualiza quantidade de produto, toda vez que um produto é comprado
+-- impede a compra caso não haja produto
+
+-- CREATE OR REPLACE TRIGGER atauliaza_qtd_produto
+-- BEFORE INSERT ON COMPRAS
+-- FOR EACH ROW
+--     UPDATE PRODUTO
+--     SET QUANTIDADE = QUANTIDADE - 1
+--     WHERE ID = NEW.ID_PRODUTO && QUANTIDADE > 0
+
+
+-- TODO:
+-- fazer trigger para incrementar a quantidade de itens da lista_de_desejos toda vez que se adicionar uma linha à 
+-- lista_contem_produtos
