@@ -47,6 +47,28 @@ FROM (
 GROUP BY u.NOME 
 HAVING COUNT(p.ID) > 1;
 
+
+-- Retorna as compra cujo preço do produto é o maior de todos
+SELECT * 
+	FROM CIN.COMPRAS c 
+	WHERE (c.PRECO/c.QTD_PRODUTOS) = (
+		SELECT max(c.PRECO/c.QTD_PRODUTOS)
+			FROM CIN.COMPRAS c
+	)
+
+-- Retorna os produtos que valem mais de 100 e a média entre eles;
+-- Subconsulta do tipo escalar
+SELECT ID , NOME, PRECO, (
+	SELECT AVG(PRECO) 
+		FROM CIN.PRODUTO prod 
+		WHERE PRECO > 100
+	) AS avg100up 
+	FROM CIN.PRODUTO prod 
+	WHERE PRECO > 100 
+	GROUP BY ID, NOME, PRECO;
+
+
+		
 -- consulta que retira todos os dados sensiveis do usuario
 
 -- consulta que retorna todas as compras do usuario
