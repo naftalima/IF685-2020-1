@@ -115,14 +115,15 @@ SELECT *
 
 -- TODO:
 
--- UNION
 -- Retorna os ids dos produtos que foram vendidos ou estao na LISTA_DE_DESESJOS
+-- UNION
 SELECT c.ID_PRODUTO 
 	FROM COMPRAS c 
 UNION
 SELECT lcp.ID_PRODUTO
 	FROM LISTA_CONTEM_PRODUTOS lcp
 
+-- UNION ALL
 -- Popularidade do produto (compras ou lista de desejos)
 SELECT  COUNT(ID_PRODUTO) Ocorrência, ID_PRODUTO Produto FROM (
 	SELECT c.ID_PRODUTO 

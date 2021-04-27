@@ -19,7 +19,7 @@
 - [] Operação de conjunto
   - [x] UNION
     - Produtos que foram vendidos ou desejados
-  - [X] UNION ALL
+  - [x] UNION ALL
   - [] INTERSECT 
   - [] MINUS
 
