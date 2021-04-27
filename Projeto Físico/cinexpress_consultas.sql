@@ -67,6 +67,10 @@ SELECT ID , NOME, PRECO, (
 	FROM CIN.PRODUTO prod 
 	WHERE PRECO > 100 
 	GROUP BY ID, NOME, PRECO;
+	
+-- Retorna o cadastro de Harry Poter
+-- Subconsulta do tipo linha
+SELECT * FROM USUARIOS u WHERE u.NOME LIKE 'Harry Potter';
 
 -- Retorna Tabela com CPF, nome do produto, quantidade comprada e preço somado na compra
 -- Subconsulta do tipo tabela
@@ -102,6 +106,7 @@ SELECT *
 			FROM LISTA_CONTEM_PRODUTOS lcp 
 			WHERE p.ID = lcp.ID_PRODUTO
 		)
+
 
 		
 -- consulta que retira todos os dados sensiveis do usuario
