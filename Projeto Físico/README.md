@@ -12,11 +12,13 @@
 - [x] Subconsulta do tipo escalar
   - Retorna as compra do produto mais caro
   - Retorn os produtos que valem mais de 100 e a média entre eles
-- [] Subconsulta do tipo linha
+- [x] Subconsulta do tipo linha
+  - Retorna todos os usuarios com nome Harry Potter
 - [x] Subconsulta do tipo tabela
   -  Retorna tabela com CPF, nome do produto, quantidade e preço
 - [] Operação de conjunto
-  - [] UNION
+  - [x] UNION
+    - Produtos que foram vendidos ou desejados
   - [] UNION ALL
   - [] INTERSECT 
   - [] MINUS

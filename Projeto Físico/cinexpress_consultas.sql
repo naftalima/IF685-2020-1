@@ -114,3 +114,12 @@ SELECT *
 -- consulta que retorna todas as compras do usuario
 
 -- TODO:
+
+-- UNION
+-- Retorna os ids dos produtos que foram vendidos ou estao na LISTA_DE_DESESJOS
+SELECT c.ID_PRODUTO 
+	FROM COMPRAS c 
+UNION
+SELECT lcp.ID_PRODUTO
+	FROM LISTA_CONTEM_PRODUTOS lcp
+
