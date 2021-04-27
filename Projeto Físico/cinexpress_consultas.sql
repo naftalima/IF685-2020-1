@@ -72,6 +72,10 @@ SELECT ID , NOME, PRECO, (
 -- Subconsulta do tipo linha
 SELECT * FROM USUARIOS u WHERE u.NOME LIKE 'Harry Potter';
 
+-- subselect linha
+SELECT NOME FROM -- Harry Potter
+(SELECT * FROM USUARIOS u WHERE u.CPF = 32374108376);
+
 -- Retorna Tabela com CPF, nome do produto, quantidade comprada e preço somado na compra
 -- Subconsulta do tipo tabela
 SELECT c.CPF_COMPRADOR, (
@@ -123,8 +127,8 @@ UNION
 SELECT lcp.ID_PRODUTO
 	FROM LISTA_CONTEM_PRODUTOS lcp
 
--- UNION ALL
 -- Popularidade do produto (compras ou lista de desejos)
+-- UNION ALL
 SELECT  COUNT(ID_PRODUTO) Ocorrência, ID_PRODUTO Produto FROM (
 	SELECT c.ID_PRODUTO 
 		FROM COMPRAS c 
@@ -136,3 +140,17 @@ GROUP BY ID_PRODUTO
 ORDER BY COUNT(ID_PRODUTO) DESC;
 
 -- contar quantas vezes o produto foi comprado e desejado
+
+-- INTERSECT
+-- Retorna os compradores que possuem lista de desejos
+SELECT u.NOME FROM (
+	SELECT CPF_COMPRADOR FROM COMPRAS c 
+	INTERSECT SELECT ldd.CPF_COMPRADOR FROM LISTA_DE_DESEJOS ldd
+)
+JOIN USUARIOS u ON u.CPF = CPF_COMPRADOR;
+
+-- MINUS
+-- Nos dá os técnicos que não participaram de nenhuma compra (tão com preguiça)
+SELECT t.ID FROM TECNICO t  
+MINUS
+SELECT c.ID_TECNICO FROM COMPRAS;
