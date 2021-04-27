@@ -45,7 +45,7 @@ FROM (
 	INNER JOIN USUARIOS u ON u.CPF = v.CPF_USUARIO 
 )
 GROUP BY u.NOME 
-HAVING COUNT(p.ID) > 1;
+HAVING COUNT(p.ID) > 3;
 
 
 -- Retorna as compras do produto que é mais caro
