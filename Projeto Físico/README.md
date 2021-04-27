@@ -13,15 +13,18 @@
   - Retorna as compra do produto mais caro
   - Retorn os produtos que valem mais de 100 e a média entre eles
 - [x] Subconsulta do tipo linha
-  - Retorna todos os usuarios com nome Harry Potter
+  - Retorna o usuarios com nome Harry Potter
 - [x] Subconsulta do tipo tabela
   -  Retorna tabela com CPF, nome do produto, quantidade e preço
-- [] Operação de conjunto
+- [x] Operação de conjunto
   - [x] UNION
     - Produtos que foram vendidos ou desejados
   - [x] UNION ALL
-  - [] INTERSECT 
-  - [] MINUS
+    - Retorna a quantidade de ocorrencia dos produtos vendidos ou desejados.
+  - [x] INTERSECT 
+    - Usuarios que possuem lista de desejos e realizou compras
+  - [x] MINUS
+    - Retorna o nome do comprador que comprou, mas não fez lista de desejos
 
 > Atenção: 
     Cada aluno deve fazer ao menos 01 dessas consultas mais 01 procedimento, função ou gatilho.
