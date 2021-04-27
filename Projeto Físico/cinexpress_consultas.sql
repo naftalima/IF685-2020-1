@@ -123,3 +123,15 @@ UNION
 SELECT lcp.ID_PRODUTO
 	FROM LISTA_CONTEM_PRODUTOS lcp
 
+-- Popularidade do produto (compras ou lista de desejos)
+SELECT  COUNT(ID_PRODUTO) Ocorrência, ID_PRODUTO Produto FROM (
+	SELECT c.ID_PRODUTO 
+		FROM COMPRAS c 
+	UNION ALL 
+	SELECT lcp.ID_PRODUTO 
+		FROM LISTA_CONTEM_PRODUTOS lcp	
+) 
+GROUP BY ID_PRODUTO
+ORDER BY COUNT(ID_PRODUTO) DESC;
+
+-- contar quantas vezes o produto foi comprado e desejado
