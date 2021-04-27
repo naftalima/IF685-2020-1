@@ -78,9 +78,30 @@ SELECT c.CPF_COMPRADOR, (
 	FROM CIN.COMPRAS c;
 
 
+-- Retorna usuário que são só compradores ou só vendedores
+-- Outer join
+SELECT *
+	FROM
+		(SELECT c.CPF_USUARIO AS comprador, v.CPF_USUARIO AS vendedor  FROM (COMPRADOR c 
+		FULL JOIN VENDEDOR v ON v.CPF_USUARIO = c.CPF_USUARIO)) d
+		WHERE d.COMPRADOR IS NULL or d.vendedor IS NULL;
 
+-- Retorna produtos que não foram comprados
+-- Left join
+SELECT p.NOME 
+	FROM PRODUTO p
+		LEFT JOIN COMPRAS c ON c.ID_PRODUTO = p.ID 
+	WHERE c.ID_PRODUTO IS NULL
 	
-
+-- Retorna todos os produtos desejados 
+-- Semi junção
+SELECT *
+	FROM PRODUTO p
+	WHERE EXISTS (
+		SELECT 1
+			FROM LISTA_CONTEM_PRODUTOS lcp 
+			WHERE p.ID = lcp.ID_PRODUTO
+		)
 
 		
 -- consulta que retira todos os dados sensiveis do usuario
