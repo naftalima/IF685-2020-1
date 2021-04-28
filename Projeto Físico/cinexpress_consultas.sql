@@ -1,7 +1,6 @@
--- -Group by/Having
-
 -- o WHERE especifica o SELECT e o HAVING especifica o WHERE (*)
 
+-- Group by/Having
 -- Quero listar o valor total das compras que custam mais de 120 do usuario X somente se o valor total passar de 500
 SELECT SUM(PRECO), CPF_COMPRADOR FROM COMPRAS c
 WHERE c.PRECO > 120.0
@@ -18,18 +17,8 @@ INNER JOIN USUARIOS u ON c.CPF_COMPRADOR = u.CPF
 INNER JOIN PRODUTO p ON c.ID_PRODUTO = p.ID
 ORDER BY u.NOME;
 
--- TODO:
--- -Subconsulta do tipo escalar
-    -- selecionar a quantidade COMPRAS e seus NOMES dos itens distintos que estao nas listas de desejo, 
-    -- e ordernar pela quantidade 
-
--- SELECT column1 = (SELECT column-name FROM table-name WHERE condition),
---        column-names
--- FROM table-name
--- WEHRE condition
-
-
--- selecionar os vendedores q tem mais de 3 produto
+-- Inner Join
+-- Selecionar os vendedores q tem mais de 3 produto
 SELECT u.NOME , COUNT(p.ID)
 FROM (
 	VENDEDOR v
