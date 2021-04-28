@@ -9,8 +9,6 @@
 
 [Gabriel Maciel (gmc2)](https://github.com/Confucioo)
 
-[Luis Felipe Miranda (lfms)](https:/github.com/luisfelip80)
-
 [Marco Maia (magm2)](https:/github.com/marcogmaia)
 
 [Nathalia Lima (npl)](https:/github.com/naftalima)
