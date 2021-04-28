@@ -51,63 +51,7 @@ BEGIN
 END;
 
 --------------END-SEQUENCES---------------
-
--- CREATE [OR REPLACE] FUNCTION function_name  
---    [ (parameter [,parameter]) ]  
--- RETURN return_datatype  
--- IS | AS  
---  [declaration_section]  
--- BEGIN  
---    executable_section  
--- [EXCEPTION  
---    exception_section]  
--- END [function_name];  
-
-
--- CREATE OR REPLACE FUNCTION get_total_sales(
---     in_year PLS_INTEGER
--- ) 
--- RETURN NUMBER
--- IS
---     l_total_sales NUMBER := 0;
--- BEGIN
---     -- get total sales
---     SELECT SUM(unit_price * quantity)
---     INTO l_total_sales
---     FROM order_items
---     INNER JOIN orders USING (order_id)
---     WHERE status = 'Shipped'
---     GROUP BY EXTRACT(YEAR FROM order_date)
---     HAVING EXTRACT(YEAR FROM order_date) = in_year;
-    
---     -- return the total sales
---     RETURN l_total_sales;
--- END;
-
-
--- CREATE OR REPLACE FUNCTION gasto_comprador(CPF IN NUMBER)
--- -- parametros?? vai receber a key (CPF)
--- RETURN NUMBER
--- IS total NUMBER(12) := 0;
--- BEGIN
---     SELECT SUM(PRECO) FROM COMPRAS WHERE CPF_COMPRADOR=CPF;
---     -- soma tudo aqui
---     -- retorna o valor total
-
--- TODO:
--- trigger para atualiza quantidade de produto, toda vez que um produto é comprado
--- impede a compra caso não haja produto
-
--- CREATE OR REPLACE TRIGGER atauliaza_qtd_produto
--- BEFORE INSERT ON COMPRAS
--- FOR EACH ROW
---     UPDATE PRODUTO
---     SET QUANTIDADE = QUANTIDADE - 1
---     WHERE ID = NEW.ID_PRODUTO && QUANTIDADE > 0
-
-
-
----------------------------------------------------------------
+------------------------------------------
 
 -- TODO:
 -- fazer trigger para incrementar a quantidade de itens da lista_de_desejos toda vez que se adicionar uma linha à 
@@ -118,10 +62,78 @@ END;
 -- caso nao tenha como realizar a cmopra, dar um print de erro
 -- precisa de commit
 
+CREATE OF REPLACE FUNCTION insert_compra (uCPF, pID) IS
+DECLARE 
+BEGIN
+END
+
 -- TODO // pode ser trigger ou função pra fazer a inserção -- mais clean como trigger
 -- quando uma pessoa entra no banco de dados com a indicação de alguém
 -- atualiza a quantidade de indicações do que indicou
+CREATE OR REPLACE TRIGGER INCREMENTA 
+BEFORE INSERT ON USUARIOS
+FOR EACH ROW
+DECLARE ucpf NUMBER := 0;
+BEGIN 
+	IF (:NEW.cpf_padrinho IS NOT NULL) THEN 
+		UPDATE USUARIOS u
+		SET u.QTD_INDICACOES = u.QTD_INDICACOES + 1
+		WHERE u.CPF = :NEW.cpf_padrinho;
+		SELECT CPF INTO ucpf FROM USUARIOS u2 WHERE u2.CPF = :NEW.cpf_padrinho;
+	END IF;
+	dbms_output.put_line('CPF padrinho: '||ucpf);
+END;
+/
+
 
 -- TODO 
 -- uma função/procedimento com query ?
 -- query CPF e retorna lista de compras
+
+
+-- TODO
+-- Agrupar compras (?)
+
+
+
+
+
+
+
+---------- TESTANDO --------------
+-- \/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+-- Procedimento print formatada
+CREATE OR REPLACE PROCEDURE 
+print_formatado(cpf NUMBER, id NUMBER, ts TIMESTAMP) IS
+BEGIN 
+	dbms_output.put_line(cpf);
+	dbms_output.put_line('	'||id||' --- '||ts);
+END;
+/
+
+CREATE OR REPLACE PROCEDURE test_proc IS 
+BEGIN 
+	dbms_output.put_line('oi');
+END;
+/
+
+-- fazer uma função de compra (transação) pra povoar correntamente os campos de compra 
+-- caso nao tenha como realizar a cmopra, dar um print de erro
+-- precisa de commit
+
+--CREATE OF REPLACE FUNCTION insert_compra (uCPF, pID) IS
+DECLARE 
+	CPF NUMBER := 1234;
+	PID NUMBER := 2;
+	t TIMESTAMP;
+BEGIN
+	-- get_time_stamp
+	t := CURRENT_TIMESTAMP;
+	print_formatado(CPF, PID, t);
+	test_proc();
+--	COMMIT; 
+END;
+
+
+
