@@ -60,17 +60,26 @@ END;
 -- TODO
 -- fazer uma função de compra (transação) pra povoar correntamente os campos de compra 
 -- caso nao tenha como realizar a cmopra, dar um print de erro
--- precisa de commit
-
-CREATE OF REPLACE FUNCTION insert_compra (uCPF, pID) IS
-DECLARE 
+CREATE OR REPLACE FUNCTION get_preco(pID IN NUMBER) 
+RETURN FLOAT IS 
+	var FLOAT := 0.0;
 BEGIN
-END
+	SELECT PRECO INTO var FROM PRODUTO p WHERE p.ID = pID;
+	RETURN var;
+END;
+/
+
+CREATE OR REPLACE PROCEDURE compra_a_vista(uCPF IN NUMBER, pID IN NUMBER, tID IN NUMBER) IS
+BEGIN
+    INSERT INTO COMPRAS(CPF_COMPRADOR, ID_PRODUTO, HORARIO, ID_TECNICO, QTD_PRODUTOS, QTD_PARCELAS, VALOR_PARCELAS, PRECO, JUROS)
+    VALUES (uCPF, pID, CURRENT_TIMESTAMP, tID, 1, 1, get_preco(pID), get_preco(pID), 0)
+END;
+/
 
 -- TODO // pode ser trigger ou função pra fazer a inserção -- mais clean como trigger
 -- quando uma pessoa entra no banco de dados com a indicação de alguém
 -- atualiza a quantidade de indicações do que indicou
-CREATE OR REPLACE TRIGGER INCREMENTA 
+CREATE OR REPLACE TRIGGER incrementa_indicacoes
 BEFORE INSERT ON USUARIOS
 FOR EACH ROW
 DECLARE ucpf NUMBER := 0;
@@ -135,5 +144,5 @@ BEGIN
 --	COMMIT; 
 END;
 
-
+-- 
 
