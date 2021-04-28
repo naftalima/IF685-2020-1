@@ -106,10 +106,13 @@ END;
 --     WHERE ID = NEW.ID_PRODUTO && QUANTIDADE > 0
 
 
+
+
+---------------------------------------------------------------
+
 -- TODO:
 -- fazer trigger para incrementar a quantidade de itens da lista_de_desejos toda vez que se adicionar uma linha à 
 -- lista_contem_produtos
-
 
 -- TODO
 -- fazer uma função de compra (transação) pra povoar correntamente os campos de compra 
@@ -119,3 +122,8 @@ END;
 -- TODO // pode ser trigger ou função pra fazer a inserção -- mais clean como trigger
 -- quando uma pessoa entra no banco de dados com a indicação de alguém
 -- atualiza a quantidade de indicações do que indicou
+
+
+-- TODO 
+-- uma função/procedimento com query ?
+-- query CPF e retorna lista de compras
