@@ -85,7 +85,6 @@ END;
 -- END;
 
 
-
 -- CREATE OR REPLACE FUNCTION gasto_comprador(CPF IN NUMBER)
 -- -- parametros?? vai receber a key (CPF)
 -- RETURN NUMBER
