@@ -23,13 +23,6 @@ ORDER BY u.NOME;
     -- selecionar a quantidade COMPRAS e seus NOMES dos itens distintos que estao nas listas de desejo, 
     -- e ordernar pela quantidade 
 
-
--- SELECT column-names
--- FROM table-name1
--- WHERE value IN (SELECT column-name
---                 FROM table-name2 
---                 WHERE condition)
-
 -- SELECT column1 = (SELECT column-name FROM table-name WHERE condition),
 --        column-names
 -- FROM table-name
@@ -67,17 +60,9 @@ SELECT ID , NOME, PRECO, (
 	FROM CIN.PRODUTO prod 
 	WHERE PRECO > 100 
 	GROUP BY ID, NOME, PRECO;
-	
--- Retorna o cadastro de Harry Poter
--- Subconsulta do tipo linha
-SELECT * FROM USUARIOS u WHERE u.NOME LIKE 'Harry Potter';
 
--- subselect linha
-SELECT NOME FROM -- Harry Potter
-(SELECT * FROM USUARIOS u WHERE u.CPF = 32374108376);
-
--- Retorna Tabela com CPF, nome do produto, quantidade comprada e preço somado na compra
 -- Subconsulta do tipo tabela
+-- Retorna Tabela com CPF, nome do produto, quantidade comprada e preço somado na compra
 SELECT c.CPF_COMPRADOR, (
 	SELECT nome 
 		FROM CIN.PRODUTO p 
@@ -85,6 +70,15 @@ SELECT c.CPF_COMPRADOR, (
 	) AS nome, c.QTD_PRODUTOS, c.PRECO 
 	FROM CIN.COMPRAS c;
 
+-- pessoas que tiveram compras avaliadas pelo mesmo tecnico da compra X
+-- Subconsulta do tipo linha
+SELECT * FROM COMPRAS c 
+WHERE c.ID_TECNICO =
+(
+	SELECT c2.ID_TECNICO FROM COMPRAS c2
+	WHERE c2.CPF_COMPRADOR = 32374108376 AND c2.ID_PRODUTO =5
+	AND c2.HORARIO = TO_TIMESTAMP('1983-06-12 18:13:12', 'yyyy-mm-dd HH24:MI:SS')
+);
 
 -- Retorna usuário que são só compradores ou só vendedores
 -- Outer join

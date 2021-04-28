@@ -107,7 +107,6 @@ END;
 
 
 
-
 ---------------------------------------------------------------
 
 -- TODO:
@@ -122,7 +121,6 @@ END;
 -- TODO // pode ser trigger ou função pra fazer a inserção -- mais clean como trigger
 -- quando uma pessoa entra no banco de dados com a indicação de alguém
 -- atualiza a quantidade de indicações do que indicou
-
 
 -- TODO 
 -- uma função/procedimento com query ?
