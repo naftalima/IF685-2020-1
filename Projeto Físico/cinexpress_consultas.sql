@@ -68,19 +68,9 @@ SELECT ID , NOME, PRECO, (
 	WHERE PRECO > 100 
 	GROUP BY ID, NOME, PRECO;
 	
--- Retorna o cadastro de Harry Potere
+-- Retorna o cadastro de Harry Poter
 -- Subconsulta do tipo linha
 SELECT * FROM USUARIOS u WHERE u.NOME LIKE 'Harry Potter';
-
--- pessoas que tiveram compras avaliadas pelo mesmo tecnico da compra X
--- Subconsulta do tipo linha
-SELECT * FROM COMPRAS c 
-WHERE c.ID_TECNICO =
-(
-	SELECT c2.ID_TECNICO FROM COMPRAS c2
-	WHERE c2.CPF_COMPRADOR = 32374108376 AND c2.ID_PRODUTO =5
-	AND c2.HORARIO = TO_TIMESTAMP('1983-06-12 18:13:12', 'yyyy-mm-dd HH24:MI:SS')
-);
 
 -- subselect linha
 SELECT NOME FROM -- Harry Potter
@@ -164,5 +154,3 @@ JOIN USUARIOS u ON u.CPF = CPF_COMPRADOR;
 SELECT t.ID FROM TECNICO t  
 MINUS
 SELECT c.ID_TECNICO FROM COMPRAS;
-
-
